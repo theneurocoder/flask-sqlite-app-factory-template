@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Notes</h1>
+
+  {% with message = get_flashed_messages() %}
+    {% if message %}
+      <p>{{ message[0] }}</p>
+    {% endif %}
+  {% endwith %}
+
+  <form method="post" action="/notes">
+    <div>
+      <label for="title">Title</label><br>
+      <input type="text" id="title" name="title" required>
+    </div>
+
+    <div>
+      <label for="content">Content</label><br>
+      <textarea id="content" name="content" rows="5" required></textarea>
+    </div>
+
+    <button type="submit">Create note</button>
+  </form>
+
+  <hr>
+
+  {% if notes %}
+    {% for note in notes %}
+      <article>
+        <h3>{{ note[0] }}</h3>
+        <p>{{ note[1] }}</p>
+      </article>
+    {% endfor %}
+  {% else %}
+    <p>No notes yet.</p>
+  {% endif %}
+{% endblock %}
