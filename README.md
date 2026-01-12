@@ -14,33 +14,6 @@ If `pip`, `flask`, and `pytest` are not available as direct commands on your sys
 ## Installation
 After downloading the template, create and activate a virtual environment, then install the dependencies by running `pip install -r requirements.txt`.
 
-## Required File Renaming
-This template comes with files named `gitignore` and `env.example`. You must rename these files to `.gitignore` and `.env.example` (with a leading dot) respectively. To rename the files:
-
-- macOS / Linux: 
-```
-mv gitignore .gitignore
-mv env.example .env.example
-```
-
-- Windows:
-```
-ren gitignore .gitignore
-ren env.example .env.example
-```
-
-After renaming the files, they will become hidden. This is normal.
-
-If you upload your project using Git, no additional steps are required.
-
-If you upload it using a browser file upload dialog (for example, GitHub's "Upload files" dialog), you must show the hidden files in your file manager so that they are visible and can be selected. To do this:
-
-- macOS (Finder): `Cmd + Shift + .`
-
-- Windows (File Explorer): View → Show → enable 'Hidden items'
-
-- Linux (most file managers): `Ctrl + H`
-
 ## Testing
 This template includes a basic test that verifies app setup and SQLite persistence. To run the test in the shell: `pytest -s`. The test prints a message at each step, ending with `"Test completed."`
 
